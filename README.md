@@ -13,3 +13,10 @@
 
 ### Some Notes for you : 
 1. `TestingBeanApplication.java` : By running this class , you will be able to print out all the beans that have been using in our applications. 
+
+
+## Part II 
+
+What we have learn 
+1. How to create bean using (Java vs Annotation)
+2. How to use `java faker` in order to create a repository
