@@ -1,5 +1,6 @@
 package com.istad.spring_core_lessons.repository;
 
+import com.github.javafaker.Faker;
 import com.istad.spring_core_lessons.model.Student;
 import org.springframework.stereotype.Repository;
 
@@ -12,8 +13,10 @@ public class StudentRepository {
     List<Student> studentList = new ArrayList<>(){{
 
         // use loop to create a lot of user
-        add(new Student(1001,"james","male",90));
-        add(new Student(1002,"luna","female",89));
+        for(int i =0; i < 10; i++){
+            Faker obj = new Faker();
+            add(new Student(obj.idNumber().hashCode(),obj.funnyName().name(), "male", obj.number().randomNumber()));
+        }
     }};
 
     public List<Student> getAllStudents(){
